@@ -1,7 +1,12 @@
 const path = require("path");
 const nodeExternals  = require('webpack-node-externals');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+
+    /**
+     * 시작 지점 설정
+     */
     entry: {
         'index': './src/index.js',
     },
@@ -62,5 +67,9 @@ module.exports = {
      */
     optimization: {
         moduleIds: 'hashed'
-    }
+    },
+
+    plugins: [
+        new CleanWebpackPlugin(),
+    ]
 }

@@ -1,12 +1,24 @@
 {
-  "name": "express",
+  "name": "express-with-apollo",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmj21c/express-with-apollo"
+  },
+  "author": {
+    "name": "Jonghyun Jeon",
+    "email": "nmj21c@gmail.com"
+  },
   "main": "index.js",
   "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-node-externals": "^1.7.2"
@@ -14,8 +26,5 @@
   "scripts": {
     "start": "node src/index.js",
     "build": "webpack --mode development"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
   }
 }
